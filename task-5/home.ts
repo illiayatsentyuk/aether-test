@@ -27,11 +27,23 @@ class Buzzer extends Prystriy {
     constructor(name: string, isPowerd: boolean) {
         super(name, isPowerd);
     }
+
+    buzz(): void {
+        if (this.getIsPowerd()) {
+            console.log("Buzzing...");
+        }
+    }
 }
 
 class Light extends Prystriy {
     constructor(name: string, isPowerd: boolean) {
         super(name, isPowerd);
+    }
+
+    light(): void {
+        if (this.getIsPowerd()) {
+            console.log("Lighting...");
+        }
     }
 }
 

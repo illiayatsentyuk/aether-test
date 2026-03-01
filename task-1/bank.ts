@@ -7,11 +7,19 @@ class Bank{
     }
 
     deposit(amount: number){
-        this.amount += amount;
+        if (amount > 0) {
+            this.amount += amount;
+        } else {
+            console.log("Amount must be greater than 0");
+        }
     }
 
     withdraw(amount: number){
-        this.amount -= amount;
+        if (amount > 0) {
+            this.amount -= amount;
+        } else {
+            console.log("Amount must be greater than 0");
+        }
     }
 
     getBalance(){
